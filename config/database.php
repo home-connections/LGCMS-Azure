@@ -46,11 +46,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'lgcms-poc-mcfwe5qjxuso2-mysql-server.mysql.database.azure.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'lgcms-poc-mcfwe5qjxuso2-mysql-database'),
+            'username' => env('DB_USERNAME', 'azureadmin'),
+            'password' => env('DB_PASSWORD', '@Microsoft.KeyVault(SecretUri=https://lgcmspocmcfwe5qjx-vault.vault.azure.net/secrets/databasePassword/9288fe61149f44faa7804a9c0695d7e1)'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -139,11 +139,11 @@ return [
 
         'cache' => [
             'url' => env('REDIS_URL'),
-            'host' => env('REDIS_HOST', '127.0.0.1'),
+            'host' => env('REDIS_HOST', 'lgcms-poc-mcfwe5qjxuso2-cache.redis.cache.windows.net'),
             'username' => env('REDIS_USERNAME'),
-            'password' => env('REDIS_PASSWORD'),
-            'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_CACHE_DB', '1'),
+            'password' => env('@Microsoft.KeyVault(SecretUri=https://lgcmspocmcfwe5qjx-vault.vault.azure.net/secrets/azure-redis-password-14dc3/de5722ea9e9f4304ba86c803c90cd77b)'),
+            'port' => env('REDIS_PORT', '6380'),
+            'database' => env('REDIS_CACHE_DB', '0'),
         ],
 
     ],
