@@ -138,6 +138,7 @@ return [
         ],
 
         'cache' => [
+            'scheme' => 'tls',
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', 'lgcms-poc-mcfwe5qjxuso2-cache.redis.cache.windows.net'),
             'username' => env('REDIS_USERNAME'),
